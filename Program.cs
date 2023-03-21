@@ -1,4 +1,4 @@
-﻿string[] words = { "hello", "2000", "world", ":0-)" };
+﻿string[] words = { "hello", "2", "world", ":-)" };
 string[] result;
 const int MAXLENGTH = 3;
 
