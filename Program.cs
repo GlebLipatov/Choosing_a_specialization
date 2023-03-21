@@ -1,10 +1,15 @@
-﻿string[] words = {"hello", "2000", "world", ":0-)"};
-string strings = string.Empty;
+﻿string[] words = { "hello", "2000", "world", ":0-)" };
 string[] result;
+const int MAXLENGTH = 3;
 
-foreach(string word in words)
+result = GetWords(words, MAXLENGTH).Split(" ");
+
+string GetWords(string[] words, int maxLength)
 {
-    if (word.Length <= 3) strings += $"{word} ";
+    string strings = string.Empty;
+    foreach (string word in words)
+    {
+        if (word.Length <= maxLength) strings += $"{word} ";
+    }
+    return strings;
 }
-
-result = strings.Split(" ");
